@@ -21,7 +21,7 @@
 
 .hero-content {
 
-	background-image: url("/img/chalkboard.png");
+	background-image: url("{{ site.baseurl }}/img/chalkboard.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 400px;
@@ -297,7 +297,7 @@
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url("/img/falcao.jpg") no-repeat;
+	background: url("{{ site.baseurl }}/img/falcao.jpg") no-repeat;
 	background-size: cover;
 }
 
