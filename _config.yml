@@ -1,6 +1,6 @@
 name: "Turma TSI14"
 description: "Site Oficial da Turma de Tecnologia em Sistemas para Internet - IFC"
-
+baseurl: /turmatsi14
 destination: ./_site
 paginate: 10
 
