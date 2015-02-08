@@ -3,5 +3,5 @@ description: "Site Oficial da Turma de Tecnologia em Sistemas para Internet - IF
 baseurl: /turmatsi14
 destination: ./_site
 paginate: 10
-permalink: pretty
+permalink: /:title
 
