@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title> {{ page.title }} </title>
+	<meta charset="utf-8">
+	<meta name="description" content="Site Oficial da Turma TSI14 do IFCatarinense - Camboriú">
+	<meta name="keywords" content="TSI14, IFC, sistemasinternet">
+	<meta name="author" content="Jorge Falcão">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/custon.css" rel="stylesheet">
+	<link href="/css/social.css" rel="stylesheet">
+	<link href="/css/animate.css" rel="stylesheet">
+	<link href="/css/custon.css" rel="stylesheet">
+</head>
+<body>
+
+{% include header.html %}
+
+<div class="container">
+<p>{{ content }}</p>
+</div>
+
+<div class="container">
+{% include comments.html %}
+</div>
+
+{% include footer.html %}
+
+
+<!-- Load JAVASCRIPT  -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/wow.min.js"></script>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</body>
+</html>

@@ -1,0 +1,6 @@
+name: "Turma TSI14"
+description: "Site Oficial da Turma de Tecnologia em Sistemas para Internet - IFC"
+
+destination: ./_site
+paginate: 10
+

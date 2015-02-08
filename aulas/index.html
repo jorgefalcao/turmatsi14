@@ -1,0 +1,60 @@
+---
+layout: default
+title: Turma TSI14 - Aulas
+---
+<div class="container">
+<h1 class="page-header">Aulas TSI14</h1>
+
+<h3 class="page-header">Janeiro/2015<span class="badge style-badge-gone">Mês Detonado :)</span></h3>
+<p>Nenhuma aula neste mês.</p>
+
+<h3 class="page-header">Fevereiro/2015<span class="badge style-badge-now">Mês Atual</span></h3>
+<table class="table">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Matéria</th>
+<th>Professor</th>
+<th>Visualizar</th>
+{% for post in site.categories.aulas %}
+         <tr>
+         	<td><b>{{post.data}}</b></td>
+         	<td>{{post.semana}}</td>
+         	<td>{{post.materia}}</td>
+         	<td>{{post.professor}}</td>
+         	<td><a href="{{post.url}}"><button class="btn btn-primary">Visualizar aula</button></a></td>
+         </tr>
+{% endfor %}
+</table>
+
+
+<h3 class="page-header">Março/2015</h3>
+
+
+<h3 class="page-header">Abril/2015</h3>
+
+
+<h3 class="page-header">Maio/2015</h3>
+
+
+<h3 class="page-header">Junho/2015</h3>
+
+
+<h3 class="page-header">Julho/2015</h3>
+
+
+<h3 class="page-header">Agosto/2015</h3>
+
+
+<h3 class="page-header">Setembro/2015</h3>
+
+
+<h3 class="page-header">Outubro/2015</h3>
+
+
+<h3 class="page-header">Novembro/2015</h3>
+
+
+<h3 class="page-header" style="margin-bottom:150px;">Dezembro/2015</h3>
+
+
+</div>
