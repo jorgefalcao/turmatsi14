@@ -12,7 +12,7 @@ titulo: A prática do Clean Code em 6 passos
 <h5 style="margin-top:-1px;">Autor Original: André Luis Celestino</h5>
 <hr>
 
-<img class="image-show" src="/img/clean-code-01.jpg"><img>
+<img class="image-show" src="{{ site.baseurl }}/img/clean-code-01.jpg"><img>
 
 <div class="post-content">
 <p><span style="color:red;">1) Não é possível criar um código limpo de primeira</span><br>
