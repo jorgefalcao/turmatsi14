@@ -3,7 +3,6 @@ layout: post
 categories : [tutoriais]
 data: 08 de Fevereiro de 2015
 autor: Jorge Falcão
-permalink: pretty
 comments: true
 titulo: A prática do Clean Code em 6 passos
 ---
