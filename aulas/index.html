@@ -21,7 +21,7 @@ title: Turma TSI14 - Aulas
          	<td>{{post.semana}}</td>
          	<td>{{post.materia}}</td>
          	<td>{{post.professor}}</td>
-         	<td><a href="{{post.url}}"><button class="btn btn-primary">Visualizar aula</button></a></td>
+         	<td><a href="{{ site.baseurl }}/{{post.url}}"><button class="btn btn-primary">Visualizar aula</button></a></td>
          </tr>
 {% endfor %}
 </table>
