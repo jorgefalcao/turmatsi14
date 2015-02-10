@@ -17,10 +17,10 @@ titulo: Introdução ao PHP PDO
 <h2>Habilitar o PDO</h2>
 <p>Antes de começarmos a trabalhar com o PDO, é necessário habilitar o driver do PDO e o driver referente ao banco que será utilizado. Para habilitar o PDO é bem simples, vá ate o seu arquivo php.ini que encontra-se dentro do diretório onde foi instalado o PHP e remova os comentários (;) das linhas abaixo.</p>
 
-<h3><strong>Listagem 1<strong> Habilitando PDO no Windows</h3>
+<h3><strong>Listagem 1</strong> Habilitando PDO no Windows</h3>
 
 <p>>extension=php_pdo.dll<br>
-extension=php_pdo_mysql.dll</p
+extension=php_pdo_mysql.dll</p>
 
 <h3><strong>Listagem 2</strong> Habilitando PDO no Linux</p></h3>
 
@@ -47,7 +47,7 @@ A classe PDO em sua instancia pede como parâmetro primeiro o banco que será ut
 
 <p>Vejamos abaixo o exemplo de um inserção de dados no banco, imagem que temos uma tabela chamada de pessoa com os campos idpessoa, nome e email e iremos utilizar a biblioteca para inserir nesta tabela.</p>
 
-<p>Lembrando, os métodos utilizados neste é exemplo são apenas alguns dos métodos existentes na biblioteca PDO, para o conhecimento de todos os métodos sugiro que acessem ao Manual do PHP <a href="http://www.php.net/manual/pt_BR/book.pdo.php">neste link.</p>
+<p>Lembrando, os métodos utilizados neste é exemplo são apenas alguns dos métodos existentes na biblioteca PDO, para o conhecimento de todos os métodos sugiro que acessem ao Manual do PHP <a href="http://www.php.net/manual/pt_BR/book.pdo.php">neste link.</a></p>
 
 <h3><strong>Listagem 4</strong> - Criando a Tabela do Banco de dados</h3>
 
