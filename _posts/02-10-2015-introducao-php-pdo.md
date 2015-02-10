@@ -110,7 +110,7 @@ CREATE  TABLE IF NOT EXISTS pessoa (
 <h4><strong>Listagem 7 - Imprimindo Dados</strong></h4>
 
 <pre class="prettyprint linenums">
-$row->nome<br><br> 
+$row->nome 
 </pre>
 
 <p>Se fossemos criar uma consulta com passagem de parâmetros seria utilizado o método prepara, pois o mesmo suporta inserção de elementos após a criação da query. Veja no exemplo abaixo se a consulta dos dados da tabela pessoa fosse realizada através de uma igualdade do nome.</p>
