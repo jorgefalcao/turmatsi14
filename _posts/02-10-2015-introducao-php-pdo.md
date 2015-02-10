@@ -83,9 +83,9 @@ CREATE  TABLE IF NOT EXISTS pessoa (
 <pre class="prettyprint linenums">
 	$rs = $con->query(“SELECT idpessoa, nome, email FROM pessoa”);
 	while($row = $rs->fetch(PDO::FETCH_OBJ))  {
-		echo $row->idpessoa . '<br/>';
-		echo $row->nome . '<br/>';
-		echo $row->email . '<br/>';
+		echo $row->idpessoa;
+		echo $row->nome;
+		echo $row->email;
 	}
 </pre>
 
@@ -110,9 +110,9 @@ $rs->bindParam(1, $nome . “%”);<br>
 if($rs->execute()) {
 	if($rs->rowCount() > 0) {
 		while($row = $rs->fetch(PDO::FETCH_OBJ)){
-			echo $row->idpessoa . '<br/>';
-			echo $row->nome . '<br/>';
-			echo $row->email . '<br/>';
+			echo $row->idpessoa;
+			echo $row->nome;
+			echo $row->email;
 		}
         }    
 }
