@@ -13,7 +13,7 @@ titulo: As melhores linguagens de programação que todo iniciante deve aprender
 
 <img class="image-show" src="{{ site.baseurl }}/img/iniciante.jpg"><img>
 
-<!-- CONTEUDO DA NOTICIA -->
+<div class="post-content">
 
 <h3>Comece com programação “drag and drop”</h3>
 <p>Programação de “arrastar e soltar” é uma forma lúdica de você entender a lógica por trás da programação. Se códigos parecem muito complexos, uma estimulo visual ajudará no seu desenvolvimento.</p>
@@ -35,7 +35,7 @@ titulo: As melhores linguagens de programação que todo iniciante deve aprender
 <p>Apesar do HTML não ser uma linguagem de programação no sentido de que Python, Ruby e Javascript são, você ainda precisa dele para construir um site. É o HTML que “descreve” a forma como o seu site irá se apresentar no navegador.</p>
 
 
-<!-- FIM DA NOTICIA -->
+</div>
 <hr>
 <div class="info-post">
 <b>em 09/02/2015 <br/>
