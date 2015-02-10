@@ -36,7 +36,10 @@ extension=pdo_mysql.so</p>
 
 <h4><strong>Listagem 3 - Conexão com o banco de dados com o PDO</strong></h4>
 
-<p>$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");<br><br> 
+<pre class="prettyprint">
+<p>$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");
+</pre>
+
 A classe PDO em sua instancia pede como parâmetro primeiro o banco que será utilizado, O caminho do banco de dados e o nome da base de dados. Após devemos inserir o login e a senha do banco de dados.</p>
 
 <p>BANCO DE DADOS:host=CAMINHO BANCO;dbname=NOME BASE</p>
@@ -51,19 +54,22 @@ A classe PDO em sua instancia pede como parâmetro primeiro o banco que será ut
 
 <h4><strong>Listagem 4 - Criando a Tabela do Banco de dados</strong></h4>
 
-CREATE  TABLE IF NOT EXISTS pessoa (<br>
-  idpessoa INT NOT NULL AUTO_INCREMENT ,<br>
-  nome VARCHAR(45) NOT NULL ,<br>
-  email VARCHAR(45) NOT NULL ,<br>
-  PRIMARY KEY (idpessoa));<br>
-
+<pre class="prettyprint">
+CREATE  TABLE IF NOT EXISTS pessoa (
+  idpessoa INT NOT NULL AUTO_INCREMENT ,
+  nome VARCHAR(45) NOT NULL ,
+  email VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (idpessoa));
+</pre>
 
 <h4><strong>Listagem 5 - Exemplo de Inserção de Dados</strong></h4>
 
-$stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");<br>
-$stmt->bindParam(1,”Nome da Pessoa”);<br>
-$stmt->bindParam(2,”email@email.com”);<br>
-$stmt->execute();<br><br>
+<pre class="prettyprint">
+$stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");
+$stmt->bindParam(1,”Nome da Pessoa”);
+$stmt->bindParam(2,”email@email.com”);
+$stmt->execute();
+</pre>
 
 <p>Conforme podemos observar no código acima, primeiramente houve uma preparação no SQL que será enviado ao banco de dados. O método prepare ele apenas inicia uma query, esta possui diversos interrogações (?) que devemos substituir pelos valores reais adicionado.</p>
 
@@ -72,12 +78,15 @@ $stmt->execute();<br><br>
 <p>Com isso já temos uma inserção no banco de dados com o auxilio da biblioteca, com os dados já inseridos vamos conhecer como devemos fazer para buscar todos os valores da tabela pessoa.</p>
 
 <h4><strong>Listagem 6 - Exemplo de Listagem de dados</strong></h4>
+
+<pre class="prettyprint">
 $rs = $con->query(“SELEC idpessoa, nome, email FROM pessoa”);<br>
 while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 	echo $row->idpessoa . “<br />”;<br>
 	echo $row->nome . “<br />”;<br>
 	echo $row->email . “<br />”;<br>
-}<br><br>
+}
+</pre>
 
 <p>No código acima temos uma consulta sem passagem de parâmetro de todos os dados armazenados na tabela pessoa. Utilizamos o método query para isso. O método query ira armazenar na variável $rs todos os dados referentes a consulta do banco.</p>
 
@@ -94,34 +103,41 @@ $row->nome<br><br>
 
 <h4><strong>Listagem 8 - Consulta com igualdade do nome</strong></h4>
 
+<pre class="prettyprint">
 $rs = $con->prepare("SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?”);<br>
 $rs->bindParam(1, $nome . “%”);<br>
-if($rs->execute()){<br>
-if($rs->rowCount() > 0){<br>
-while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
-	echo $row->idpessoa . “<br />";<br>
-	echo $row->nome . “<br />”;<br>
-	echo $row->email . “<br />”;<br>
-}<br>
-            }   <br>    
-        }<br><br>
+if($rs->execute()) {
+	if($rs->rowCount() > 0) {
+		while($row = $rs->fetch(PDO::FETCH_OBJ)){
+			echo $row->idpessoa . “<br />";
+			echo $row->nome . “<br />”;
+			echo $row->email . “<br />”;
+		}
+        }    
+}
+</pre>
+
 <p>O método prepare foi utilizado no exemplo acima com a idéia apenas de iniciar a query e aguardar pela inclusão de valores posteriormente. O nome foi inserido em um segundo momento com o % (per cento), pois em SQL ele representa um coringa. Logo estaremos buscando por todas as pessoas armazenadas no banco de dados cujo seu nome inicie com a(s) letra(s) informada na variável $nome por exemplo.</p>
 
 <p>Para efetuar as operações de atualização e deleção de dados no banco teremos um processo parecido com a inserção, seguem exemplos abaixo:</p>
 
 <h4><strong>Listagem 9 - Deletando dados</strong></h4>
 
-$stmt = $con->prepare("DELETE FROM pessoa WHERE idpessoa = ?");<br>
-$stmt->bindParam(1, $id);<br>
-$stmt->execute();<br>
+<pre class="prettyprint">
+$stmt = $con->prepare("DELETE FROM pessoa WHERE idpessoa = ?");
+$stmt->bindParam(1, $id);
+$stmt->execute();
+</pre>
 
 <h4><strong>Listagem 10 - Atualizando dados</strong></h4>
 
-$stmt = $con->prepare("UPDATE pessoa SET nome = ?, email = ? WHERE idpessoa = ?");<br>
-$stmt->bindParam(1,$nome );<br>
-$stmt->bindParam(2,$email);<br>
-$stmt->bindParam(3,$id);<br>
-$stmt->execute();<br>
+<pre class="prettyprint">
+$stmt = $con->prepare("UPDATE pessoa SET nome = ?, email = ? WHERE idpessoa = ?");
+$stmt->bindParam(1,$nome );
+$stmt->bindParam(2,$email);
+$stmt->bindParam(3,$id);
+$stmt->execute();
+</pre>
 
 </div>
 <hr>
