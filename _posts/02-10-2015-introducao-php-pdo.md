@@ -22,7 +22,7 @@ titulo: Introdução ao PHP PDO
 <p>extension=php_pdo.dll<br>
 extension=php_pdo_mysql.dll</p>
 
-<h4><strong>Listagem 2 - Habilitando PDO no Linux</strong></p></h4>
+<h4><strong>Listagem 2 - Habilitando PDO no Linux</strong></h4>
 
 <p>extension=pdo.so<br>
 extension=pdo_mysql.so</p>
@@ -36,9 +36,9 @@ extension=pdo_mysql.so</p>
 
 <h4><strong>Listagem 3 - Conexão com o banco de dados com o PDO</strong></h4>
 
-<pre class="prettyprint">
-<p>$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");
-</pre>
+<code class="prettyprint">
+$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");
+</code>
 
 A classe PDO em sua instancia pede como parâmetro primeiro o banco que será utilizado, O caminho do banco de dados e o nome da base de dados. Após devemos inserir o login e a senha do banco de dados.</p>
 
@@ -54,7 +54,7 @@ A classe PDO em sua instancia pede como parâmetro primeiro o banco que será ut
 
 <h4><strong>Listagem 4 - Criando a Tabela do Banco de dados</strong></h4>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 CREATE  TABLE IF NOT EXISTS pessoa (
   idpessoa INT NOT NULL AUTO_INCREMENT ,
   nome VARCHAR(45) NOT NULL ,
@@ -64,7 +64,7 @@ CREATE  TABLE IF NOT EXISTS pessoa (
 
 <h4><strong>Listagem 5 - Exemplo de Inserção de Dados</strong></h4>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 $stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");
 $stmt->bindParam(1,”Nome da Pessoa”);
 $stmt->bindParam(2,”email@email.com”);
@@ -79,7 +79,7 @@ $stmt->execute();
 
 <h4><strong>Listagem 6 - Exemplo de Listagem de dados</strong></h4>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 $rs = $con->query(“SELEC idpessoa, nome, email FROM pessoa”);<br>
 while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 	echo $row->idpessoa . “<br />”;<br>
@@ -103,7 +103,7 @@ $row->nome<br><br>
 
 <h4><strong>Listagem 8 - Consulta com igualdade do nome</strong></h4>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 $rs = $con->prepare("SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?”);<br>
 $rs->bindParam(1, $nome . “%”);<br>
 if($rs->execute()) {
@@ -123,7 +123,7 @@ if($rs->execute()) {
 
 <h4><strong>Listagem 9 - Deletando dados</strong></h4>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 $stmt = $con->prepare("DELETE FROM pessoa WHERE idpessoa = ?");
 $stmt->bindParam(1, $id);
 $stmt->execute();
@@ -131,7 +131,7 @@ $stmt->execute();
 
 <h4><strong>Listagem 10 - Atualizando dados</strong></h4>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 $stmt = $con->prepare("UPDATE pessoa SET nome = ?, email = ? WHERE idpessoa = ?");
 $stmt->bindParam(1,$nome );
 $stmt->bindParam(2,$email);
