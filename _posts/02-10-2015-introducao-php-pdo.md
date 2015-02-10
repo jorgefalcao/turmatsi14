@@ -6,6 +6,16 @@ autor: Luis Felipe Oliveira
 comments: true
 titulo: Introdução ao PHP PDO
 ---
+<style>
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: decimal !important }
+</style>
 
 <h1>Introdução ao PHP PDO</h1>
 <h5 style="margin-top:-1px;">Autor original: Rodrigo Marques(DevMedia)</h5>
@@ -105,8 +115,8 @@ $row->nome<br><br>
 <h4><strong>Listagem 8 - Consulta com igualdade do nome</strong></h4>
 
 <pre class="prettyprint linenums">
-$rs = $con->prepare("SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?”);<br>
-$rs->bindParam(1, $nome . “%”);<br>
+$rs = $con->prepare("SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?”);
+$rs->bindParam(1, $nome . “%”);
 if($rs->execute()) {
 	if($rs->rowCount() > 0) {
 		while($row = $rs->fetch(PDO::FETCH_OBJ)){
