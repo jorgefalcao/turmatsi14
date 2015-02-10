@@ -17,12 +17,12 @@ titulo: Introdução ao PHP PDO
 <h2>Habilitar o PDO</h2>
 <p>Antes de começarmos a trabalhar com o PDO, é necessário habilitar o driver do PDO e o driver referente ao banco que será utilizado. Para habilitar o PDO é bem simples, vá ate o seu arquivo php.ini que encontra-se dentro do diretório onde foi instalado o PHP e remova os comentários (;) das linhas abaixo.</p>
 
-<h3><strong>Listagem 1</strong> Habilitando PDO no Windows</h3>
+<h4><strong>Listagem 1</strong> Habilitando PDO no Windows</h4>
 
-<p>>extension=php_pdo.dll<br>
+<p>extension=php_pdo.dll<br>
 extension=php_pdo_mysql.dll</p>
 
-<h3><strong>Listagem 2</strong> Habilitando PDO no Linux</p></h3>
+<h4><strong>Listagem 2</strong> Habilitando PDO no Linux</p></h4>
 
 <p>extension=pdo.so<br>
 extension=pdo_mysql.so</p>
@@ -34,7 +34,7 @@ extension=pdo_mysql.so</p>
 
 <p>A utilização do PDO fornece uma camada de abstração em relação a conexão com o banco de dados visto que o PDO efetua a conexão com diversos bancos de dados da mesma maneira, modificando apenas a sua string de conexão.</p>
 
-<h3><strong>Listagem 3</strong> Conexão com o banco de dados com o PDO</h3>
+<h4><strong>Listagem 3</strong> Conexão com o banco de dados com o PDO</h4>
 
 <p>$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");<br> 
 A classe PDO em sua instancia pede como parâmetro primeiro o banco que será utilizado, O caminho do banco de dados e o nome da base de dados. Após devemos inserir o login e a senha do banco de dados.</p>
@@ -49,7 +49,7 @@ A classe PDO em sua instancia pede como parâmetro primeiro o banco que será ut
 
 <p>Lembrando, os métodos utilizados neste é exemplo são apenas alguns dos métodos existentes na biblioteca PDO, para o conhecimento de todos os métodos sugiro que acessem ao Manual do PHP <a href="http://www.php.net/manual/pt_BR/book.pdo.php">neste link.</a></p>
 
-<h3><strong>Listagem 4</strong> - Criando a Tabela do Banco de dados</h3>
+<h4><strong>Listagem 4</strong> - Criando a Tabela do Banco de dados</h4>
 
 CREATE  TABLE IF NOT EXISTS pessoa (<br>
   idpessoa INT NOT NULL AUTO_INCREMENT ,<br>
@@ -58,7 +58,7 @@ CREATE  TABLE IF NOT EXISTS pessoa (<br>
   PRIMARY KEY (idpessoa));<br>
 
 
-<h3><strong>Listagem 5</strong> - Exemplo de Inserção de Dados</h3>
+<h4><strong>Listagem 5</strong> - Exemplo de Inserção de Dados</h4>
 
 $stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");<br>
 $stmt->bindParam(1,”Nome da Pessoa”);<br>
@@ -87,12 +87,12 @@ while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 
 <p>Exemplo para imprimir o valor do campo nome da consulta teria que utilizar</p>
 
-<h3><strong>Listagem 7</strong> - Imprimindo Dados</h3>
+<h4><strong>Listagem 7</strong> - Imprimindo Dados</h4>
 
 $row->nome.<br> 
 <p>Se fossemos criar uma consulta com passagem de parâmetros seria utilizado o método prepara, pois o mesmo suporta inserção de elementos após a criação da query. Veja no exemplo abaixo se a consulta dos dados da tabela pessoa fosse realizada através de uma igualdade do nome.</p>
 
-<h3><strong>Listagem 8</strong> - Consulta com igualdade do nome</h3>
+<h4><strong>Listagem 8</strong> - Consulta com igualdade do nome</h4>
 
 $rs = $con->prepare("SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?”);<br>
 $rs->bindParam(1, $nome . “%”);<br>
@@ -109,13 +109,13 @@ while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 
 <p>Para efetuar as operações de atualização e deleção de dados no banco teremos um processo parecido com a inserção, seguem exemplos abaixo:</p>
 
-<h3><strong>Listagem 9</strong> - Deletando dados</h3>
+<h4><strong>Listagem 9</strong> - Deletando dados</h4>
 
 $stmt = $con->prepare("DELETE FROM pessoa WHERE idpessoa = ?");<br>
 $stmt->bindParam(1, $id);<br>
 $stmt->execute();<br>
 
-<h3><strong>Listagem 10</strong> - Atualizando dados</h3>
+<h4><strong>Listagem 10</strong> - Atualizando dados</h4>
 
 $stmt = $con->prepare("UPDATE pessoa SET nome = ?, email = ? WHERE idpessoa = ?");<br>
 $stmt->bindParam(1,$nome );<br>
