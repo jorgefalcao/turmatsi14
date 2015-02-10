@@ -36,7 +36,7 @@ extension=pdo_mysql.so</p>
 
 <h4><strong>Listagem 3 - Conexão com o banco de dados com o PDO</strong></h4>
 
-<p>$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");<br> 
+<p>$con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");<br><br> 
 A classe PDO em sua instancia pede como parâmetro primeiro o banco que será utilizado, O caminho do banco de dados e o nome da base de dados. Após devemos inserir o login e a senha do banco de dados.</p>
 
 <p>BANCO DE DADOS:host=CAMINHO BANCO;dbname=NOME BASE</p>
