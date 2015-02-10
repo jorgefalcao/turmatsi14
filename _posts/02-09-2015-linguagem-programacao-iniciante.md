@@ -16,7 +16,7 @@ titulo: As melhores linguagens de programação que todo iniciante deve aprender
 <div class="post-content">
 
 <h2>Comece com programação “drag and drop”</h2>
-<p>Programação de “arrastar e soltar” é uma forma lúdica de você entender a lógica por trás da programação. Se códigos parecem muito complexos, uma estimulo visual ajudará no seu desenvolvimento.</p>
+<p>Programação de “arrastar e soltar” é uma forma lúdica de você entender a lógica por trás da programação. Se códigos parecem muito complexos, um estimulo visual ajudará no seu desenvolvimento.</p>
 
 <p>“Uma vez que você aprendeu os conceitos básicos usando arrastar e soltar, você imediatamente vai querer aprender como fazer aquele código”, disse Hadi Partovi, co-fundador do Code.org.</p>
 
