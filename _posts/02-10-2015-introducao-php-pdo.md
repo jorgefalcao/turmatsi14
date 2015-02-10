@@ -55,15 +55,15 @@ CREATE  TABLE IF NOT EXISTS pessoa (<br>
   idpessoa INT NOT NULL AUTO_INCREMENT ,<br>
   nome VARCHAR(45) NOT NULL ,<br>
   email VARCHAR(45) NOT NULL ,<br>
-  PRIMARY KEY (idpessoa));
-<p>Segue acima um exemplo de criação da tabela para mostrar o exemplo do PDO.</p>
+  PRIMARY KEY (idpessoa));<br>
+
 
 <h3><strong>Listagem 5</strong> - Exemplo de Inserção de Dados</h3>
 
 $stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");<br>
 $stmt->bindParam(1,”Nome da Pessoa”);<br>
 $stmt->bindParam(2,”email@email.com”);<br>
-$stmt->execute();
+$stmt->execute();<br>
 
 <p>Conforme podemos observar no código acima, primeiramente houve uma preparação no SQL que será enviado ao banco de dados. O método prepare ele apenas inicia uma query, esta possui diversos interrogações (?) que devemos substituir pelos valores reais adicionado.</p>
 
@@ -77,7 +77,7 @@ while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 	echo $row->idpessoa . “<br />”;<br>
 	echo $row->nome . “<br />”;<br>
 	echo $row->email . “<br />”;<br>
-}
+}<br>
 
 <p>No código acima temos uma consulta sem passagem de parâmetro de todos os dados armazenados na tabela pessoa. Utilizamos o método query para isso. O método query ira armazenar na variável $rs todos os dados referentes a consulta do banco.</p>
 
@@ -113,7 +113,7 @@ while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 
 $stmt = $con->prepare("DELETE FROM pessoa WHERE idpessoa = ?");<br>
 $stmt->bindParam(1, $id);<br>
-$stmt->execute();
+$stmt->execute();<br>
 
 <h3><strong>Listagem 10</strong> - Atualizando dados</h3>
 
@@ -125,4 +125,13 @@ $stmt->execute();<br>
 
 </div>
 <hr>
+
+<div class="info-post">
+<b>em 09/02/2015 <br/>
+por:  Luis Felipe Oliveira </b><br/>
+<div class="image-author-luis"></div>
+<div class="author-description-luis">
+	Trabalha com T.I voltado ao suporte para usuario, estudante<br/> de TSI e nas horas vagas degustador de cervejas.
+</div>
+</div>
 
