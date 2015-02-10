@@ -11,7 +11,7 @@ titulo: As melhores linguagens de programação que todo iniciante deve aprender
 <h5 style="margin-top:-1px;">Créditos: Business Insider</h5>
 <hr>
 
-<img class="image-show" src="{{ site.baseurl }}/img/iniciante.jpg"><img>
+<img class="image-show img-responsive" src="{{ site.baseurl }}/img/iniciante.jpg"><img>
 
 <div class="post-content">
 
