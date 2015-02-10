@@ -287,6 +287,20 @@
 
 }
 
+.image-author-luis {
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	float: center;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url("/img/luis.jpg") no-repeat;
+	background-size: cover;
+}
+
 .image-author-falcao {
 	width: 150px;
 	height: 150px;
@@ -302,6 +316,13 @@
 }
 
 .author-description-falcao {
+
+	margin-top: 10px;
+	font-family: sans-serif;
+
+}
+
+.author-description-luis {
 
 	margin-top: 10px;
 	font-family: sans-serif;
