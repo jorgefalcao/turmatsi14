@@ -36,9 +36,9 @@ extension=pdo_mysql.so</p>
 
 <h4><strong>Listagem 3 - Conexão com o banco de dados com o PDO</strong></h4>
 
-<code class="prettyprint linenums">
+<pre class="prettyprint linenums">
 $con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");
-</code>
+</pre>
 
 A classe PDO em sua instancia pede como parâmetro primeiro o banco que será utilizado, O caminho do banco de dados e o nome da base de dados. Após devemos inserir o login e a senha do banco de dados.</p>
 
@@ -81,11 +81,11 @@ CREATE  TABLE IF NOT EXISTS pessoa (
 <h4><strong>Listagem 6 - Exemplo de Listagem de dados</strong></h4>
 
 <pre class="prettyprint linenums">
-	$rs = $con->query(“SELEC idpessoa, nome, email FROM pessoa”);
+	$rs = $con->query(“SELECT idpessoa, nome, email FROM pessoa”);
 	while($row = $rs->fetch(PDO::FETCH_OBJ))  {
-		echo $row->idpessoa . “<br />”;
-		echo $row->nome . “<br />”;
-		echo $row->email . “<br />”;
+		echo $row->idpessoa . '<br/>';
+		echo $row->nome . '<br/>';
+		echo $row->email . '<br/>';
 	}
 </pre>
 
@@ -110,9 +110,9 @@ $rs->bindParam(1, $nome . “%”);<br>
 if($rs->execute()) {
 	if($rs->rowCount() > 0) {
 		while($row = $rs->fetch(PDO::FETCH_OBJ)){
-			echo $row->idpessoa . “<br />";
-			echo $row->nome . “<br />”;
-			echo $row->email . “<br />”;
+			echo $row->idpessoa . '<br/>';
+			echo $row->nome . '<br/>';
+			echo $row->email . '<br/>';
 		}
         }    
 }
