@@ -36,7 +36,7 @@ extension=pdo_mysql.so</p>
 
 <h4><strong>Listagem 3 - Conexão com o banco de dados com o PDO</strong></h4>
 
-<code class="prettyprint">
+<code class="prettyprint linenums">
 $con = new PDO("mysql:host=localhost;dbname=exercicio", "root", "senha");
 </code>
 
@@ -56,19 +56,20 @@ A classe PDO em sua instancia pede como parâmetro primeiro o banco que será ut
 
 <pre class="prettyprint linenums">
 CREATE  TABLE IF NOT EXISTS pessoa (
-  idpessoa INT NOT NULL AUTO_INCREMENT ,
-  nome VARCHAR(45) NOT NULL ,
-  email VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (idpessoa));
+  	idpessoa INT NOT NULL AUTO_INCREMENT ,
+  	nome VARCHAR(45) NOT NULL ,
+  	email VARCHAR(45) NOT NULL ,
+  	PRIMARY KEY (idpessoa));
+)
 </pre>
 
 <h4><strong>Listagem 5 - Exemplo de Inserção de Dados</strong></h4>
 
 <pre class="prettyprint linenums">
-$stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");
-$stmt->bindParam(1,”Nome da Pessoa”);
-$stmt->bindParam(2,”email@email.com”);
-$stmt->execute();
+	$stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");
+	$stmt->bindParam(1,”Nome da Pessoa”);
+	$stmt->bindParam(2,”email@email.com”);
+	$stmt->execute();
 </pre>
 
 <p>Conforme podemos observar no código acima, primeiramente houve uma preparação no SQL que será enviado ao banco de dados. O método prepare ele apenas inicia uma query, esta possui diversos interrogações (?) que devemos substituir pelos valores reais adicionado.</p>
@@ -80,12 +81,12 @@ $stmt->execute();
 <h4><strong>Listagem 6 - Exemplo de Listagem de dados</strong></h4>
 
 <pre class="prettyprint linenums">
-$rs = $con->query(“SELEC idpessoa, nome, email FROM pessoa”);<br>
-while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
-	echo $row->idpessoa . “<br />”;<br>
-	echo $row->nome . “<br />”;<br>
-	echo $row->email . “<br />”;<br>
-}
+	$rs = $con->query(“SELEC idpessoa, nome, email FROM pessoa”);
+	while($row = $rs->fetch(PDO::FETCH_OBJ))  {
+		echo $row->idpessoa . “<br />”;
+		echo $row->nome . “<br />”;
+		echo $row->email . “<br />”;
+	}
 </pre>
 
 <p>No código acima temos uma consulta sem passagem de parâmetro de todos os dados armazenados na tabela pessoa. Utilizamos o método query para isso. O método query ira armazenar na variável $rs todos os dados referentes a consulta do banco.</p>
