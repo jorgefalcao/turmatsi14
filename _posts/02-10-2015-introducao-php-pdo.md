@@ -89,7 +89,7 @@ while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 
 <h4><strong>Listagem 7 - Imprimindo Dados</strong></h4>
 
-$row->nome.<br> 
+$row->nome<br><br> 
 <p>Se fossemos criar uma consulta com passagem de parâmetros seria utilizado o método prepara, pois o mesmo suporta inserção de elementos após a criação da query. Veja no exemplo abaixo se a consulta dos dados da tabela pessoa fosse realizada através de uma igualdade do nome.</p>
 
 <h4><strong>Listagem 8 - Consulta com igualdade do nome</strong></h4>
