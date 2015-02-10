@@ -115,7 +115,7 @@ $row->nome<br><br>
 <h4><strong>Listagem 8 - Consulta com igualdade do nome</strong></h4>
 
 <pre class="prettyprint linenums">
-$rs = $con->prepare('SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?');
+$rs = $con->prepare("SELECT idpessoa, nome, email FROM pessoa WHERE nome LIKE ?");
 $rs->bindParam(1, $nome . “%”);
 if($rs->execute()) {
 	if($rs->rowCount() > 0) {
