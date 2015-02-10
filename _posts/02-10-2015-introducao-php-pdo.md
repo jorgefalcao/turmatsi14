@@ -63,7 +63,7 @@ CREATE  TABLE IF NOT EXISTS pessoa (<br>
 $stmt = $con->prepare("INSERT INTO pessoa(nome, email) VALUES(?, ?)");<br>
 $stmt->bindParam(1,”Nome da Pessoa”);<br>
 $stmt->bindParam(2,”email@email.com”);<br>
-$stmt->execute();<br>
+$stmt->execute();<br><br>
 
 <p>Conforme podemos observar no código acima, primeiramente houve uma preparação no SQL que será enviado ao banco de dados. O método prepare ele apenas inicia uma query, esta possui diversos interrogações (?) que devemos substituir pelos valores reais adicionado.</p>
 
@@ -71,13 +71,13 @@ $stmt->execute();<br>
 
 <p>Com isso já temos uma inserção no banco de dados com o auxilio da biblioteca, com os dados já inseridos vamos conhecer como devemos fazer para buscar todos os valores da tabela pessoa.</p>
 
-<h3><strong>Listagem 6 - Exemplo de Listagem de dados</strong></h3>
+<h4><strong>Listagem 6 - Exemplo de Listagem de dados</strong></h4>
 $rs = $con->query(“SELEC idpessoa, nome, email FROM pessoa”);<br>
 while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
 	echo $row->idpessoa . “<br />”;<br>
 	echo $row->nome . “<br />”;<br>
 	echo $row->email . “<br />”;<br>
-}<br>
+}<br><br>
 
 <p>No código acima temos uma consulta sem passagem de parâmetro de todos os dados armazenados na tabela pessoa. Utilizamos o método query para isso. O método query ira armazenar na variável $rs todos os dados referentes a consulta do banco.</p>
 
@@ -99,12 +99,12 @@ $rs->bindParam(1, $nome . “%”);<br>
 if($rs->execute()){<br>
 if($rs->rowCount() > 0){<br>
 while($row = $rs->fetch(PDO::FETCH_OBJ)){<br>
-	echo $row->idpessoa . “<br />”;<br>
+	echo $row->idpessoa . “<br />";<br>
 	echo $row->nome . “<br />”;<br>
 	echo $row->email . “<br />”;<br>
 }<br>
             }   <br>    
-        }<br>
+        }<br><br>
 <p>O método prepare foi utilizado no exemplo acima com a idéia apenas de iniciar a query e aguardar pela inclusão de valores posteriormente. O nome foi inserido em um segundo momento com o % (per cento), pois em SQL ele representa um coringa. Logo estaremos buscando por todas as pessoas armazenadas no banco de dados cujo seu nome inicie com a(s) letra(s) informada na variável $nome por exemplo.</p>
 
 <p>Para efetuar as operações de atualização e deleção de dados no banco teremos um processo parecido com a inserção, seguem exemplos abaixo:</p>
