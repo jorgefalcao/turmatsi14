@@ -36,7 +36,7 @@ funcionalidades ainda não funcionam completamente (olha aí uma oportunidade de
 Instituição, programadores!). <br/>Clique no <strong>(?) Ajuda</strong> para mais informações sobre renovação,
 multas, etc.
 <a href="http://pergamum.ifc.edu.br/pergamum/biblioteca/index.php" target="_blank">Neste link</a> você pode pesquisar
-obras disponíveis em todas as unidades IFC, e sim, é possível reservá-los.</p>
+obras disponíveis em todas as unidades IFC, e, sim, é possível reservá-los.</p>
 
 </div>
 <hr>
