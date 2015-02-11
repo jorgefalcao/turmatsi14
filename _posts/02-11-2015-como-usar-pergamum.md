@@ -8,7 +8,7 @@ titulo: Como usar o Pergamum IFC
 ---
 
 <h1>Como usar o Pergamum IFC</h1>
-<h5 style="margin-top:-1px;">Créditos: Douglas de Paula</h5>
+<h5 style="margin-top:-1px;">Texto por: Douglas de Paula</h5>
 <hr>
 
 <img class="image-show" src="{{ site.baseurl }}/img/pergamum.jpg"><img>
