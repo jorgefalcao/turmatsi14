@@ -15,6 +15,8 @@ titulo: Como usar o Pergamum IFC
 
 <div class="post-content">
 
+Website: <a href="http://pergamum.ifc.edu.br/pergamum/biblioteca/index.php" target="_blank">Pergamum IFC</a>
+
 <p>Pergamum é uma ferramenta online usada por diversas faculdades. Seu uso principal é para
 aqueles <span style="text-decoration:line-through">que têm preguiça de ir renovar livros pegos na biblioteca e afins</span>.
 Como usar: Crie uma conta (é necessário ir até a biblioteca do câmpus, onde a bibliotecária realizará o
