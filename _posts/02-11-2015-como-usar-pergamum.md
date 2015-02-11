@@ -33,11 +33,11 @@ sistema, se tiver sorte, é possível manter um ou mais livros por meses (risos)
 funcionalidades ainda não funcionam completamente (olha aí uma oportunidade de ajudar a
 Instituição, programadores!). <br/>Clique no <strong>(?) Ajuda</strong> para mais informações sobre renovação,
 multas, etc.
-No link http://pergamum.ifc.edu.br/pergamum/biblioteca/index.php você pode pesquisar
+<a href="http://pergamum.ifc.edu.br/pergamum/biblioteca/index.php" target="_blank">Neste link</a> você pode pesquisar
 obras disponíveis em todas as unidades IFC, e sim, é possível reservá-los.</p>
 
-
 </div>
+<hr>
 <div class="info-post">
 <b>em 08/02/2015 <br/>
 por: Jorge Falcão</b><br/>
