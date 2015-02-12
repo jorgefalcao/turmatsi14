@@ -24,7 +24,7 @@ title: Turma TSI14 - Aulas
          	<td><a href="{{ site.baseurl }}/{{post.url}}"><button class="btn btn-primary">Visualizar aula</button></a></td>
          </tr>
          
-         {% if site.categories == "aulas-n" %}
+         {% if post.categories contains 'aulas-n' %}
          <tr>
          	<td><b>{{post.data}}</b></td>
          	<td>{{post.semana}}</td>
