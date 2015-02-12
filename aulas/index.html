@@ -23,6 +23,16 @@ title: Turma TSI14 - Aulas
          	<td>{{post.professor}}</td>
          	<td><a href="{{ site.baseurl }}/{{post.url}}"><button class="btn btn-primary">Visualizar aula</button></a></td>
          </tr>
+         
+         {% if site.categories == "aulas-n" %}
+         <tr>
+         	<td><b>{{post.data}}</b></td>
+         	<td>{{post.semana}}</td>
+         	<td>{{post.materia}}</td>
+         	<td>{{post.professor}}</td>
+         	<td><strong>Não teve aula</strong></td>
+         </tr>
+         
 {% endfor %}
 </table>
 
