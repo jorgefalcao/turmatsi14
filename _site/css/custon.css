@@ -314,19 +314,6 @@
 	background: url("../img/falcao.jpg") no-repeat;
 	background-size: cover;
 }
-.image-author-yuri {
-	width: 150px;
-	height: 150px;
-	text-align: center;
-	float: center;
-	margin: 0 auto;
-	margin-top: 15px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	background: url("../img/yuri.jpg") no-repeat;
-	background-size: cover;
-}
 
 .author-description-falcao {
 
