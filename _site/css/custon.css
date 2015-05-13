@@ -21,7 +21,7 @@
 
 .hero-content {
 
-	background-image: url("/img/chalkboard.png");
+	background-image: url("../img/chalkboard.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 400px;
@@ -275,7 +275,7 @@
 
 .post-content {
 
-	font-family: sans-serif, arial;
+	font-family: FontAwesome;
 	font-size: 18px;
 
 }
@@ -285,6 +285,20 @@
 	width: 100%;
 	height: 600px;
 
+}
+
+.image-author-luis {
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	float: center;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url("../img/luis.jpg") no-repeat;
+	background-size: cover;
 }
 
 .image-author-falcao {
@@ -297,7 +311,21 @@
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url("/img/falcao.jpg") no-repeat;
+	background: url("../img/falcao.jpg") no-repeat;
+	background-size: cover;
+}
+
+.image-author-yuri {
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	float: center;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url("../img/yuri.jpg") no-repeat;
 	background-size: cover;
 }
 
@@ -308,7 +336,19 @@
 
 }
 
+.author-description-luis {
 
+	margin-top: 10px;
+	font-family: sans-serif;
+
+}
+
+.author-description-yuri {
+
+	margin-top: 10px;
+	font-family: sans-serif;
+
+}
 .block-post {
 
 	background-color: #f3f3f3;
@@ -451,6 +491,18 @@
 
 		margin-top: -105px;
 
+	}
+	
+	.link-calendario {
+			
+		margin-bottom: 150px;	
+		
+	}
+	
+	.comments-section {
+		
+		margin-bottom: 150px;
+		
 	}
 
 }

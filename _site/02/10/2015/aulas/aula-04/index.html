@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title> Turma TSI14 - Tutoriais </title>
+	<title> Aula 04 </title>
 	<meta charset="utf-8">
 	<meta name="description" content="Site Oficial da Turma TSI14 do IFCatarinense - Camboriú">
 	<meta name="keywords" content="TSI14, IFC, sistemasinternet">
@@ -41,88 +41,119 @@
 
 
 <div class="container">
-<p>
+<p><style>
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: decimal !important }
+</style>
 
-	<div class="block-post">
-		<a href="/turmatsi14//05/13/2015/tutoriais/criando-virtual-hosts-no-apache"><h1 class="title-show"> Criando virtual hosts no Apache </h1></a>
-		<hr width="30%">
-			<div class="data-show">
-				Em 13 de maio de 2015
-			</div>
-				<div class="author-show">
-					por <b>Yuri C. Fontella</b>
-				</div>
-		<hr width="30%">
-	</div>
-	
-	<hr>
-         
+<h3 class="page-header">Matéria</h3>
+<p>Programação Orientada a Objetos</p>
 
+<h3 class="page-header">Professor</h3>
+<p>Reginaldo Rubens</p>
 
-	<div class="block-post">
-		<a href="/turmatsi14//02/11/2015/tutoriais/como-usar-pergamum"><h1 class="title-show"> Como usar o Pergamum IFC </h1></a>
-		<hr width="30%">
-			<div class="data-show">
-				Em 11 de Fevereiro de 2015
-			</div>
-				<div class="author-show">
-					por <b>Jorge Falcão</b>
-				</div>
-		<hr width="30%">
-	</div>
-	
-	<hr>
-         
+<h3 class="page-header">Data</h3>
+<p>10/02/2015</p>
 
+<h3 class="page-header">Resumo</h3>
+<ul>
+      <li>Explicação de classes e Objetos</li>
+      <li>Passagem de uma aplicação poo em php</li>
+</ul>
 
-	<div class="block-post">
-		<a href="/turmatsi14//02/10/2015/tutoriais/introducao-php-pdo"><h1 class="title-show"> Introdução ao PHP PDO </h1></a>
-		<hr width="30%">
-			<div class="data-show">
-				Em 10 de Fevereiro de 2015
-			</div>
-				<div class="author-show">
-					por <b>Luis Felipe Oliveira</b>
-				</div>
-		<hr width="30%">
-	</div>
-	
-	<hr>
-         
+<h3 class="page-header">Conteúdo</h3>
+<pre class="prettyprint linenums">
+&lt;?php
+ 
+// Declara a classe Aluno
+class Aluno
+{
+        // Declara os atributos (variáveis) da classe
+        // usa "private" para impedir o acesso direto aos atributos
+        private $nome = '';
+        private $notas = array();
+ 
+        // método (função) para definir o valor do atributo $nome do objeto
+        public function setNome($nome)
+        {
+                // $this é uma referência para o objeto que está executando o método
+                $this-&gt;nome = $nome;
+        }
+ 
+        // método para ler o valor do atributo privado $nome
+        public function getNome()
+        {
+                // retorna o valor atual do atributo
+                return $this-&gt;nome;
+        }
+ 
+        // método para adicionar uma nota ao array de notas do objeto
+        public function addNota($nota)
+        {
+                // se o valor da nota é inválido
+                if ($nota &lt; 0 || $nota &gt; 10)
+                {
+                        // gera uma "exceção" (um erro do PHP) com a mensagem passada como parâmetro
+                        throw new Exception('Valor de nota inválido.');
+                }
+ 
+                // adiciona a nota passada como parâmetro como um novo elemento no array de notas do objeto
+                array_push($this-&gt;notas, $nota);
+        }
+ 
+        // método para calcular a média das notas adicionadas ao array de notas
+        public function calcularMedia()
+        {
+                return array_sum($this-&gt;notas) / count($this-&gt;notas);
+        }
+}
+ 
+class App
+{
+        private $alunos = array();
+ 
+        private function inicializar()
+        {
+                $this-&gt;alunos[0] = new Aluno();
+                $this-&gt;alunos[0]-&gt;setNome('José');
+                $this-&gt;alunos[0]-&gt;addNota(8);
+                $this-&gt;alunos[0]-&gt;addNota(7);
+                $this-&gt;alunos[0]-&gt;addNota(6);
+ 
+                $this-&gt;alunos[1] = new Aluno();
+                $this-&gt;alunos[1]-&gt;setNome('Maria');
+                $this-&gt;alunos[1]-&gt;addNota(8);
+                $this-&gt;alunos[1]-&gt;addNota(8.5);
+                $this-&gt;alunos[1]-&gt;addNota(9);
+        }
+ 
+        private function exibirDados()
+        {
+                foreach($this-&gt;alunos as $aluno) {
+                        echo 'Nome: ' . $aluno-&gt;getNome();
+                        echo 'Média: ' . $aluno-&gt;calcularMedia();
+                }
+        }
+ 
+        public function executar()
+        {
+                $this-&gt;inicializar();
+                $this-&gt;exibirDados();
+        }
+}
+ 
+$app = new App();
+$app-&gt;executar();
 
-
-	<div class="block-post">
-		<a href="/turmatsi14//02/09/2015/tutoriais/linguagem-programacao-iniciante"><h1 class="title-show"> As melhores linguagens de programação que todo iniciante deve aprender. </h1></a>
-		<hr width="30%">
-			<div class="data-show">
-				Em 09 de Fevereiro de 2015
-			</div>
-				<div class="author-show">
-					por <b>Luis Felipe Oliveira</b>
-				</div>
-		<hr width="30%">
-	</div>
-	
-	<hr>
-         
-
-
-	<div class="block-post">
-		<a href="/turmatsi14//02/08/2015/tutoriais/pratica-clean-code-6-passos"><h1 class="title-show"> A prática do Clean Code em 6 passos </h1></a>
-		<hr width="30%">
-			<div class="data-show">
-				Em 08 de Fevereiro de 2015
-			</div>
-				<div class="author-show">
-					por <b>Jorge Falcão</b>
-				</div>
-		<hr width="30%">
-	</div>
-	
-	<hr>
-         
-
-
+</pre>
+<h3 class="page-header">Anexos</h3>
+<p>Vazio.</p>
 
 </p>
 </div>
