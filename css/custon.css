@@ -526,3 +526,20 @@
 	}
 
 }
+
+/* Custom Yuri F. */
+
+blockquote {
+	border-left: 10px solid #CCC;
+	margin: 1.5em 0px;
+	padding: 1.2em 2em 1.5em;
+	background: none repeat scroll 0% 0% #F5F5F5;
+}
+blockquote {
+  quotes: none;
+}
+
+blockquote p {
+  display: inline-block;
+	font-size: 14px;
+}
