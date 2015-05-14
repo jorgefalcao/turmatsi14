@@ -342,12 +342,14 @@
 	font-family: sans-serif;
 
 }
+
 .author-description-yuri {
 
 	margin-top: 10px;
 	font-family: sans-serif;
 
 }
+
 
 .block-post {
 
@@ -368,7 +370,7 @@
 
 }
 
-@media screen and (max-width: 767px) { 
+@media screen and (max-width: 767px) {
 
 	.call-1 {
 
@@ -432,7 +434,7 @@
 	.footer {
 
 		margin-top: -5px;
-	};
+	};}
 
 @media screen and (max-width: 423px) {
 
@@ -492,17 +494,17 @@
 		margin-top: -105px;
 
 	}
-	
+
 	.link-calendario {
-			
-		margin-bottom: 150px;	
-		
-	}
-	
-	.comments-section {
-		
+
 		margin-bottom: 150px;
-		
+
+	}
+
+	.comments-section {
+
+		margin-bottom: 150px;
+
 	}
 
 }
@@ -524,7 +526,6 @@
 	}
 
 }
-
 
 /* Custom Yuri F. */
 
