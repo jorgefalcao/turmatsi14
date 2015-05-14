@@ -59,25 +59,33 @@ titulo: Criando VirtualHosts no Apache
 <img class="image-show img-responsive" src="{{ site.baseurl }}/img/nano-2.jpg" style="width:700px; height:100px">
 <p><i>Para salvar aperte Ctrl+O e para sair Ctrl+X</i></p>
 
-<p>Pronto, sua virtualhost deve estar funcionado... abra o navegador e digite o <i>ServerName</i> criado por você.</p>
+<p>Pronto, sua virtualhost deve estar funcionado... abra o navegador e digite o <i>ServerName</i> criado por você, ele irá direcionar para o <i>DocumentRoot</i> que você definiu.</p>
 
-<img class="image-show img-responsive" src="{{ site.baseurl }}/img/web.jpg" style="width:700px; height:500px">
+<img class="image-show img-responsive" src="{{ site.baseurl }}/img/web.png" style="width:745px; height:510px; margin-left: -20px">
+
+<h4>Outras opções</h4>
+<p><b>Ainda é possível adicionar outras opções no arquivo de configuração:</b></p>
+<p>ServerAdmin webmaster@localhost</p>
+<p><b>E o caminho dos logs:</b></p>
+<p>ErrorLog ${APACHE_LOG_DIR}/error.log</p>
+<p>CustomLog ${APACHE_LOG_DIR}/access.log combined</p>
 
 <br>
 
 <h4>Considerações finais</h4>
-<p style="margin:0">Para cada site ou projeto é preciso configurar uma nova virtualhost, esse tutorial foi escrito e testado especificamente voltado para a distribuição Linux Debian e seus derivados (Ubuntu, Mint, Elementary...).</p>
-<p style="margin:0">O processo tem que ser exatamente esse, mas vocês podem achar outros métodos de se fazer, por exemplo, para abrir um arquivo, não necessariamnete deverá ser aberto dentro do terminal com o comando nano. O mesmo pode ser aberto em editor de arquivos.</p>
-<p style="margin:0">Cabe a cada um fazer do jeito que mais se sente a vontade, espero que consigam criar e configurar... qualquer dúvida comentem aí!</p>
+<p style="margin:0">Para cada site ou projeto é preciso configurar uma nova virtualhost, esse tutorial foi escrito e testado especificamente voltado para a distribuição <i>Debian GNU/Linux</i> e seus derivados (Ubuntu, Mint, Elementary, etc).
+O processo tem que ser exatamente esse, mas vocês podem achar outros métodos de se fazer, por exemplo, para abrir um arquivo não necessariamente deverá ser aberto dentro do terminal com o comando <i>nano</i>. O mesmo pode ser aberto com um editor de arquivos.
+Cabe a cada um fazer do jeito que mais se sente a vontade, espero que consigam criar e configurar... qualquer dúvida comentem aí!</p>
 
-<hr>
+<hr style="margin: 40px 0 40px">
 
 <div class="info-post">
 <b>em 13/05/2015 <br/>
 por:  Yuri C. Fontella </b><br/>
 <div class="image-author-yuri"></div>
 <div class="author-description-yuri">
-	Gaúcho colorado de Porto Alegre, tomando uma Polar e desenvolvendo alguma coisa.
+	Gaúcho colorado de Porto Alegre. 
+	<p style="margin:0">Sempre tomando uma Polar e desenvolvendo alguma coisa.</p>
 </div>
 </div>
 
